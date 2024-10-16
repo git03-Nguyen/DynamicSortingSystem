@@ -1,3 +1,8 @@
+using System.Reflection;
+using DynamicSortingImpl.Middlewares;
+using DynamicSortingImpl.Others;
+using MediatR;
+
 namespace DynamicSortingImpl;
 
 public class Program
@@ -12,7 +17,12 @@ public class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+        
+        builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+        builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
 
+        builder.Services.AddScoped<IMockRepository, MockRepository>();
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
