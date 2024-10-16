@@ -14,22 +14,22 @@ public class ValidationPipelineBehavior<TRequest, TResponse> : IPipelineBehavior
 
     public Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
-        var validationErrors = _validators
-            .Select(validator => validator.Validate(request))
-            .SelectMany(result => result.Errors)
-            .Select(x => new 
-            {
-                Field = x.PropertyName,
-                ErrorMessage = x.ErrorMessage,
-                ErrorMessageCode = x.ErrorCode
-            })
-            .ToList();
-
-        if (validationErrors.Any())
-        {
-            throw new ValidationException(validationErrors.First().ErrorMessage);
-        }
-
+        // var validationErrors = _validators
+        //     .Select(validator => validator.Validate(request))
+        //     .SelectMany(result => result.Errors)
+        //     .Select(x => new 
+        //     {
+        //         Field = x.PropertyName,
+        //         ErrorMessage = x.ErrorMessage,
+        //         ErrorMessageCode = x.ErrorCode
+        //     })
+        //     .ToList();
+        //
+        // if (validationErrors.Any())
+        // {
+        //     throw new ValidationException(validationErrors.First().ErrorMessage);
+        // }
+        Console.WriteLine($"ValidationPipelineBehavior: {request}");
         return next();
     }
 }

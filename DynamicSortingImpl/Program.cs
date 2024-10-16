@@ -20,11 +20,11 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         
+        builder.Services.AddScoped<IMockRepository, MockRepository>();
         builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
         builder.Services.AddValidatorsFromAssemblyContaining<GetTestValidator>();
         builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
-
-        builder.Services.AddScoped<IMockRepository, MockRepository>();
+        builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(SortPipelineBehavior<,>));
         
         var app = builder.Build();
 
