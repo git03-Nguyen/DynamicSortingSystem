@@ -1,6 +1,6 @@
 using DynamicSortingImpl.Entities;
 
-namespace DynamicSortingImpl.FeatureQueries;
+namespace DynamicSortingImpl.FeatureQueries.RequestResponse;
 
 public class GetTestResponse
 {

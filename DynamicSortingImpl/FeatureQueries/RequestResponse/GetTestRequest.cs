@@ -1,6 +1,6 @@
 using DynamicSortingImpl.Sortings.Models;
 
-namespace DynamicSortingImpl.FeatureQueries;
+namespace DynamicSortingImpl.FeatureQueries.RequestResponse;
 
 public class GetTestRequest : ISortRequest
 {

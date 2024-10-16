@@ -13,7 +13,7 @@ public class MockRepository : IMockRepository
     {
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "1",
             Name = "Alice",
             Age = 28,
             CreatedAt = DateTime.Now.AddDays(-10),
@@ -22,7 +22,7 @@ public class MockRepository : IMockRepository
         },
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "2",
             Name = "Bob",
             Age = 34,
             CreatedAt = DateTime.Now.AddDays(-20),
@@ -31,7 +31,7 @@ public class MockRepository : IMockRepository
         },
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "3",
             Name = "Charlie",
             Age = 22,
             CreatedAt = DateTime.Now.AddDays(-15),
@@ -40,7 +40,7 @@ public class MockRepository : IMockRepository
         },
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "4",
             Name = "David",
             Age = 40,
             CreatedAt = DateTime.Now.AddDays(-5),
@@ -49,7 +49,7 @@ public class MockRepository : IMockRepository
         },
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "5",
             Name = "Eva",
             Age = 31,
             CreatedAt = DateTime.Now.AddDays(-8),
@@ -58,7 +58,7 @@ public class MockRepository : IMockRepository
         },
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "6",
             Name = "Frank",
             Age = 45,
             CreatedAt = DateTime.Now.AddDays(-30),
@@ -67,7 +67,7 @@ public class MockRepository : IMockRepository
         },
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "7",
             Name = "Grace",
             Age = 29,
             CreatedAt = DateTime.Now.AddDays(-12),
@@ -76,7 +76,7 @@ public class MockRepository : IMockRepository
         },
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "8",
             Name = "Hank",
             Age = 50,
             CreatedAt = DateTime.Now.AddDays(-1),
@@ -85,7 +85,7 @@ public class MockRepository : IMockRepository
         },
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "9",
             Name = "Ivy",
             Age = 37,
             CreatedAt = DateTime.Now.AddDays(-25),
@@ -94,7 +94,7 @@ public class MockRepository : IMockRepository
         },
         new AbcModel 
         {
-            Id = Guid.NewGuid(),
+            Id = "10",
             Name = "Jack",
             Age = 24,
             CreatedAt = DateTime.Now.AddDays(-3),

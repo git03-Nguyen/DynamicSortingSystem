@@ -1,4 +1,5 @@
 using DynamicSortingImpl.FeatureQueries;
+using DynamicSortingImpl.FeatureQueries.RequestResponse;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

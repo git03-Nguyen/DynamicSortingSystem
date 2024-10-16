@@ -1,6 +1,8 @@
 using System.Reflection;
+using DynamicSortingImpl.FeatureQueries;
 using DynamicSortingImpl.Middlewares;
 using DynamicSortingImpl.Others;
+using FluentValidation;
 using MediatR;
 
 namespace DynamicSortingImpl;
@@ -19,6 +21,7 @@ public class Program
         builder.Services.AddSwaggerGen();
         
         builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+        builder.Services.AddValidatorsFromAssemblyContaining<GetTestValidator>();
         builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
 
         builder.Services.AddScoped<IMockRepository, MockRepository>();
