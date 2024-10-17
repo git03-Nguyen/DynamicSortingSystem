@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace DynamicSortingImpl.FeatureQueries;
+namespace DynamicSortingImpl.FeatureQueries.Test;
 
 public class GetTestValidator : AbstractValidator<GetTestQuery>
 {

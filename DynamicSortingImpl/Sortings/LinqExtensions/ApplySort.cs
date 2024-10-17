@@ -6,11 +6,12 @@ namespace DynamicSortingImpl.Sortings.LinqExtensions;
 
 public static class ApplySort
 {
-    public static IQueryable ApplySortCondition(
-        this IQueryable query, 
-        IList<SortCondition> sortConditions
+    public static IQueryable<T> ApplySortCondition<T>(
+        this IQueryable<T> query, 
+        IList<SortCondition<T>> sortConditions
     )
     {
+        Console.WriteLine("[ApplySortCondition]: Applying sort condition");
         if (sortConditions.Count == 0)
         {
             return query;

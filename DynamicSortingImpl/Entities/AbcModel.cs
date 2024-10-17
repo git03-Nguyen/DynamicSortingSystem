@@ -2,7 +2,7 @@ using DynamicSortingImpl.Sortings.Models;
 
 namespace DynamicSortingImpl.Entities;
 
-public class AbcModel : ISortData 
+public class AbcModel 
 {
     public string Id { get; set; }
     public string Name { get; set; }

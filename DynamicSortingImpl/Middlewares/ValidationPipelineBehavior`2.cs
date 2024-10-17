@@ -29,7 +29,7 @@ public class ValidationPipelineBehavior<TRequest, TResponse> : IPipelineBehavior
         // {
         //     throw new ValidationException(validationErrors.First().ErrorMessage);
         // }
-        Console.WriteLine($"ValidationPipelineBehavior: {request}");
+        Console.WriteLine($"[ValidationPipelineBehavior]: {request.GetType().Name}");
         return next();
     }
 }

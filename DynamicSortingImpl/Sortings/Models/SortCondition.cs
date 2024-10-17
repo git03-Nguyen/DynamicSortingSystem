@@ -1,6 +1,6 @@
 namespace DynamicSortingImpl.Sortings.Models;
 
-public class SortCondition
+public class SortCondition<T>
 {
     public string Field { get; set; }
     public SortDirection Direction { get; set; }

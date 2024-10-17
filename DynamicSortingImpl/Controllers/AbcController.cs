@@ -1,5 +1,8 @@
 using DynamicSortingImpl.FeatureQueries;
-using DynamicSortingImpl.FeatureQueries.RequestResponse;
+using DynamicSortingImpl.FeatureQueries.Other;
+using DynamicSortingImpl.FeatureQueries.Other.RequestResponse;
+using DynamicSortingImpl.FeatureQueries.Test;
+using DynamicSortingImpl.FeatureQueries.Test.RequestResponse;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,13 +19,16 @@ public class AbcController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpGet]
-    public async Task<IActionResult> Test()
+    [HttpPost]
+    [Route("other")]
+    public async Task<IActionResult> Other([FromBody] GetOtherRequest request)
     {
-        return Ok("Hello World");
+        var response = await _mediator.Send(new GetOtherQuery(request));
+        return Ok(response);
     }
     
     [HttpPost]
+    [Route("sort")]
     public async Task<IActionResult> Sort([FromBody] GetTestRequest request)
     {
         var response = await _mediator.Send(new GetTestQuery(request));
