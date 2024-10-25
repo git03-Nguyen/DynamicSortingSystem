@@ -1,0 +1,12 @@
+using DynamicSortingImpl.Core.Entities;
+using SourceGenerator.Abstraction;
+using SourceGenerator.Models;
+
+namespace {{ namespaceName }}
+{
+    public partial class {{ className }} : ISortingRequest<{{ dataType }}>
+    {
+        public List<SortCondition<{{ dataType }}>> Sorts { get; set; } = new();
+        public string Name => "{{ className }}";
+    }
+}

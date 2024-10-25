@@ -19,7 +19,7 @@ public class ValidationPipelineBehavior<TRequest, TResponse> : IPipelineBehavior
         //     .SelectMany(result => result.Errors)
         //     .Select(x => new 
         //     {
-        //         Field = x.PropertyName,
+        //         SortBy = x.PropertyName,
         //         ErrorMessage = x.ErrorMessage,
         //         ErrorMessageCode = x.ErrorCode
         //     })

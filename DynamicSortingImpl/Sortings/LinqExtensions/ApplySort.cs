@@ -1,6 +1,6 @@
 using System.Text;
 using System.Linq.Dynamic.Core;
-using DynamicSortingImpl.Sortings.Models;
+using SourceGenerator.Models;
 
 namespace DynamicSortingImpl.Sortings.LinqExtensions;
 
@@ -20,12 +20,12 @@ public static class ApplySort
         var stringBuilders = new StringBuilder();
         foreach (var sort in sortConditions)
         {
-            var propertyName = sort?.Field;
+            var propertyName = sort?.SortBy;
             if (string.IsNullOrWhiteSpace(propertyName))
             {
                 continue;
             }
-            var sortOrder = sort?.Direction == SortDirection.Ascending ? "" : " desc";
+            var sortOrder = sort?.OrderBy == SortDirection.ASC ? "" : " desc";
             stringBuilders.Append($"it.{propertyName}{sortOrder}, ");
         }
         

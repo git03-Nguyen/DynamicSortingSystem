@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicSortingImpl", "DynamicSortingImpl\DynamicSortingImpl.csproj", "{F19BE24B-02B2-4A21-A771-3A9FEA3BCCEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceGenerator", "SourceGenerator\SourceGenerator.csproj", "{214CE058-C191-4D37-9B6C-6399A141D7FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{F19BE24B-02B2-4A21-A771-3A9FEA3BCCEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F19BE24B-02B2-4A21-A771-3A9FEA3BCCEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F19BE24B-02B2-4A21-A771-3A9FEA3BCCEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214CE058-C191-4D37-9B6C-6399A141D7FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214CE058-C191-4D37-9B6C-6399A141D7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214CE058-C191-4D37-9B6C-6399A141D7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214CE058-C191-4D37-9B6C-6399A141D7FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

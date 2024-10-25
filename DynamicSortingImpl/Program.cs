@@ -1,10 +1,6 @@
 using System.Reflection;
-using DynamicSortingImpl.Abstraction;
-using DynamicSortingImpl.FeatureQueries;
-using DynamicSortingImpl.FeatureQueries.Test;
+using DynamicSortingImpl.Core;
 using DynamicSortingImpl.Middlewares;
-using DynamicSortingImpl.Others;
-using DynamicSortingImpl.Sortings.Extensions;
 using FluentValidation;
 using MediatR;
 
@@ -24,13 +20,11 @@ public class Program
         builder.Services.AddSwaggerGen();
         
         builder.Services.AddScoped<IMockRepository, MockRepository>();
-        // builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-        builder.Services.RegisterListHandlerDecorator();
+        builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
         builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
 
-        builder.Services
-            .RegisterSortPipelineBehaviors();
+        // builder.Services.RegisterSortPipelineBehaviors();
                         
         
         var app = builder.Build();

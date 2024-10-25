@@ -15,10 +15,14 @@
         <PackageReference Include="Scrutor" Version="5.0.1" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
         <PackageReference Include="System.Linq.Dynamic.Core" Version="1.4.6" />
+        
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Services\" />
+        <ProjectReference Include="..\SourceGenerator\SourceGenerator.csproj" />
+        <ProjectReference Include="..\SourceGenerator\SourceGenerator.csproj" 
+                          OutputItemType="Analyzer" 
+                          ReferenceOutputAssembly="false" />
     </ItemGroup>
 
 </Project>
